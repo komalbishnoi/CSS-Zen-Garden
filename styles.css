@@ -1,0 +1,310 @@
+/*         TABLE OF CONTENTS
+
+Section-1...................External Links 
+
+Section-2...................Basic body & header setup
+
+Section-3...................Introduction
+
+Section-4...................Main Contant-Explanation,Participation,requirements,benefits
+
+Section-5...................Footer 
+
+Section-6...................Designers
+
+Section-7...................Archives & Resources
+                                           */
+
+
+/* Section-1 */
+/*load normalize cdn here*/
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css';
+/*google fonts load here*/
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Black+Ops+One');
+
+/* Section-2 */
+body{
+	 background-color: #000;
+	 font-family: 'Aldrich', arial, sans-serif;
+}
+
+.page-wrapper{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+/* robotic image load here-multiple backgrounds */
+	background-image: url("images/man.png"), url("images/man-side.png");
+	background-color:#000;
+	background-repeat: no-repeat, no-repeat;
+	background-position: right center, right bottom;
+
+}
+h1, h2, h3{
+	font-family: 'Black Ops One', verdana, cursive;
+} 
+p, a{
+	font-family: 'Aldrich', arial, sans-serif;
+}
+h1,h2 {
+	/* top headings-glowing text animation starts here */
+	/*animation parameters setup*/
+	  animation-name: glow;
+	  animation-duration: 1.5s; 
+	  animation-timing-function: ease-out; 
+	  animation-delay: 0;
+	  animation-direction: alternate;
+	  animation-iteration-count: 3;
+	  animation-fill-mode: none;
+	  animation-play-state: running;
+}
+	/*animation transformations*/
+@keyframes glow{
+	  0% {
+	    transform: scale(.3);
+	  }
+	  50% {
+	    transform: scale(1);
+	  }
+	  100% {
+	    transform: scale(1.5);
+	    }
+}
+/* top headings animation ends here */
+header{
+		color: #fff;
+		/*header height and back-image setup*/
+		height:500px;
+		background:url(images/science.jpg);
+		background-repeat:no-repeat;
+		background-size: cover;
+		background-color: lightgray;
+}
+
+h1{
+		font-size: 4em;
+		padding-top: 100px;
+		text-shadow: 1px 1px 2px black, 0 0 25px aquamarine;
+}
+
+h2{
+		font-size: 2em;
+}
+/* Section-3 */
+.summary{
+		background-color: rgba(96,176,188,0.75);
+		padding: 20px;
+		display: flex;
+}
+
+.summary a{
+		color: #fff;
+		text-decoration: none;
+		padding: 2px; 
+
+}
+.preamble{
+	   display: flex;
+	   /*div width and back-image setup*/
+	   width: 70%;
+	   background-image: url(images/flat.png);
+	   background-color: rgba(45,69,80,0.5);
+	   background-repeat: no-repeat;
+	   background-blend-mode: lighten;
+	   color: #C7D6E0;
+}
+.preamble p{
+
+		padding: 20px;
+		text-align: justify;
+
+}
+/* spider animation starts here */
+.preamble::after{
+	  content:url(images/spide.png);
+	  width: 50px;
+	  height: 50px;
+	  /*position is set relative so that animation works*/
+	  position: relative;
+	  animation-name: spider;
+	  /*animation timing and duration setup*/
+	  animation-duration: 10s;
+	  animation-delay: 0s;
+}
+/* Standard syntax - animation transformations */
+@keyframes spider {
+	  0%   {right:0px; top:0px;}
+	  25%  {right:800px; top:0px;}
+	  50%  {right:0px; top:0px;}
+	  100% {right:800px; top:0px;}
+}
+/* spider animation ends here */
+
+.preamble:hover{
+
+		background-color: #000;
+}
+
+/* Section-4*/
+
+.explanation{ 
+		display: flex;
+		width: 100%; 
+		background-color: lightgray;
+		justify-content: flex-end;
+}
+
+.explanation p, h3{
+		padding: 20px;
+		text-align: justify;
+}
+
+.participation{
+		width:30%;
+		background-color: #E1F2FE;
+		padding: 40px;
+		text-align: justify;
+}
+
+.participation h3{
+
+		padding-top: 20px;
+}
+.participation a{
+
+		color:#000;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px black, 0 0 25px white;
+}
+.benefits{
+		color: #000;
+		background-color: rgba(211,211,211,0.5); 
+		padding: 20px;
+		width: 100%;
+		height:180px;
+}
+
+.benefits:hover{
+
+	background-color: #000;
+	color: #fff;
+}
+.requirements{
+
+		display: flex;
+		color: #000;
+		background-color: rgba(96,176,188,0.75);
+		padding: 20px;
+		width: 100%;
+}
+.requirements:hover{
+
+		background-color: #000;
+		color: #fff;
+}
+.requirements a{
+
+		color: #fff;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px black, 0 0 25px aquamarine;
+}
+.requirements p{
+	    padding: 10px;
+		text-align: justify;
+}
+/* Section-5*/
+footer{
+
+		display: flex;
+		/*back-image setup*/
+		background-image: url(images/seamless.jpg);
+		background-color: rgba(171,169,186,0.75);
+		width: 30%;
+		height: 100px;
+		padding: 50px;
+	    justify-content: space-between;
+}
+footer a{
+
+		text-decoration: none;
+		color:#fff;
+		padding: 5px;
+		background-color: #000;
+		writing-mode: vertical-lr; 
+		padding: 10px;
+		border-style: outset;
+
+}
+/* Section-6*/
+.design-selection{
+
+		width: 30%;
+		background-color: #E1F2FE; 
+		padding: 50px;
+		height: 300px;
+		text-align: justify;
+}
+.design-selection a{
+
+		text-decoration: none;
+		color: rgb(96,176,188);
+		text-shadow: 1px 1px 2px black, 0 0 5px #fff;
+
+}
+.design-selection:hover{
+	background-color: #000;
+	color: #fff;
+}
+.design-archives{
+
+		display: flex;
+		background-color: rgba(211,211,211,0.5);
+		justify-content: space-around;
+		height: 100px;
+		padding: 40px;
+
+}
+.design-archives nav ul li a{
+
+		color: #000;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px black, 0 0 5px #fff;
+		padding: 50px;
+}
+.design-archives nav ul li{
+		padding: 10px;
+		border-style: outset;
+}
+.design-archives:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+/* Section-7*/
+.zen-resources{
+
+		display: flex;
+		/* back-image setup-multiple backgrounds*/
+		background-image: url(images/robot.png),url(images/seamless.jpg);
+		background-repeat: no-repeat, no-repeat;
+		background-position:right center,left top;
+		background-size: 200px 200px, cover;
+		justify-content: flex-start;
+		height: 180px;
+		color: #fff;
+		padding: 20px;
+		text-align: justify;
+}
+.zen-resources ul{
+		background-color: #000;
+		padding: 20px;
+}
+.zen-resources a{
+
+		color: rgb(211,211,211);
+		text-decoration: none;
+		padding: 20px;
+}
+
+
